@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.custom-shape-divider-bottom-1636420155 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    border-radius: 0;
+}
+
+.custom-shape-divider-bottom-1636420155 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 700px;
+    border-radius: 0;
+}
+
+.custom-shape-divider-bottom-1636420155 .shape-fill {
+    fill: #103f34;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1636420155 svg {
+        width: calc(129% + 1.3px);
+        height: 500px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1636420155 svg {
+        width: calc(206% + 1.3px);
+        height: 398px;
+    }
+}
+
+svg{
+    position: absolute;
+    bottom: 0;
+    z-index: inherit-1;
+    left: 0;
+}
+
+body,html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #11f5c0;
+}
+
+#container{
+    display: flex;
+    flex-direction: column; 
+    width: 40%;
+    height: 65%;
+    gap: 10px;
+    z-index: 1;
+    background-color: rgba(63, 48, 121, 0.445);
+    padding: .4em;
+}
+
+#preview{
+    flex: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    padding: .1em .2em;
+    background-color: white;
+    font-size: 2.5vw;
+    transition: all .5s;
+}
+
+#currentPreview{
+    text-align: right;
+    background-color: white;
+    font-size: 20px;
+    margin-top: .2em;
+    width: 100%;
+}
+
+#previousOperation{
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    font-size: 14px;
+    color: rgb(0, 0, 0, 0.4);
+    max-height: 0;
+    overflow: hidden;
+}
+
+.previousOp-in{
+    transition: all .5s;
+    max-height: 2em !important;
+}
+
+#buttons{
+    flex: 85%;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+
+.calcButtons{
+    font-family: 'Josefin Sans', sans-serif;
+    border: rgb(178, 224, 70) solid;
+    background-color: unset;
+    box-shadow: inset 0 0 0 0#f9e506;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: all .7s ease-in-out;
+}
+
+.calcButtons:hover{
+    color: black;
+}
+
+.calcButtons::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgb(178, 224, 70);
+    transition: all .6s ease-in-out;
+}
+
+.calcButtons:hover::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    color: black ;
+}
+
+.clear{
+    grid-column: span 2;
+}
+
+.equal{
+    grid-column: span 2;
+}
+
+@media (max-width: 860px){
+    #container{
+        width: 67%;
+    }
+
+    .calcButtons{
+        font-size: 4vw !important;
+    }
+
+    #currentPreview{
+        font-size: 5vw;
+    }
+}
