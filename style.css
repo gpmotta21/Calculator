@@ -76,22 +76,24 @@ body{
 }
 
 #preview{
-    flex: 15%;
-    display: flex;
-    flex-direction: column;
+    /*flex-direction: column;
+    font-size: 2.5vw; (erro de digitação(?)/argumento sobrescrito por estilos mais abaixo na cascata)
+    flex: 15%;*/
+    display: block;
     align-items: end;
     position: relative;
-    padding: .1em .2em;
+    padding: 0.45vw .5vw;
     background-color: white;
-    font-size: 2.5vw;
     transition: all .5s;
+    min-height: 9.4vh;
 }
 
 #currentPreview{
-    text-align: right;
+    /*text-align: right; (flex removido)*/
     background-color: white;
+    text-align: right;
     font-size: 20px;
-    margin-top: .2em;
+    margin-top: 4px;
     width: 100%;
 }
 
@@ -107,7 +109,7 @@ body{
 }
 
 .previousOp-in{
-    margin: .525em 0 .3em 0;
+    margin: .4em 0 .2em 0;
     transition: all .5s;
     max-height: 2em !important;
 }
