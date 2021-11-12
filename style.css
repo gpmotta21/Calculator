@@ -76,42 +76,38 @@ body{
 }
 
 #preview{
-    /*flex-direction: column;
-    font-size: 2.5vw; (erro de digitação(?)/argumento sobrescrito por estilos mais abaixo na cascata)
-    flex: 15%;*/
-    display: block;
+    flex: 15%;
     align-items: end;
     position: relative;
-    padding: 0.45vw .5vw;
+    padding: 10px 5px;
     background-color: white;
     transition: all .5s;
-    min-height: 9.4vh;
 }
 
 #currentPreview{
-    /*text-align: right; (flex removido)*/
+    flex: 85%;
     background-color: white;
     text-align: right;
-    font-size: 20px;
-    margin-top: 4px;
+    font-size: 30px;
     width: 100%;
 }
 
 #previousOperation{
     /*flex: 20%;
-    align-items: center;
-    max-height: 0;*/
+    align-items: center; */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
     display: block;
     text-align: right;
     font-size: 14px;
     color: rgb(0, 0, 0, 0.4);
-    overflow: hidden;
 }
 
 .previousOp-in{
-    margin: .4em 0 .2em 0;
     transition: all .5s;
     max-height: 2em !important;
+    opacity: 100 !important;
 }
 
 #buttons{
@@ -177,6 +173,6 @@ body{
     }
 
     #currentPreview{
-        font-size: 5vw;
+        font-size: 20px;
     }
 }
